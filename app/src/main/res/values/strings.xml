@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">FLIGHTETICKET</string>
+    <string name="from">From</string>
+    <string name="departure_date">Departure Date</string>
+    <string name="departure_time">Departure Time</string>
+    <string name="tickets">Tickets</string>
+    <string name="seat_class">Seat Class</string>
+    <string name="buy_ticket">Buy Ticket</string>
+    <string name="to">To</string>
+    <array name="cities">
+        <item>Jakarta</item>
+        <item>Surabaya</item>
+        <item>Bandung</item>
+        <item>Yogyakarta</item>
+    </array>
+
+    <array name="ticket_count">
+        <item>1 Ticket</item>
+        <item>2 Tickets</item>
+        <item>3 Tickets</item>
+        <item>4 Tickets</item>
+    </array>
+
+    <array name="class_options">
+        <item>Economy</item>
+        <item>Business</item>
+        <item>First Class</item>
+    </array>
+</resources>

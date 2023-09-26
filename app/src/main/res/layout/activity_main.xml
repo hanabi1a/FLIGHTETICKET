@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/layout_top"
+            layout="@layout/layout_top"
+            />
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_below="@id/layout_top"
+            android:textSize="17sp"
+            android:text="@string/from"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/takeoff"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="30dp"
+            android:layout_below="@id/txt1"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:src="@drawable/takeoff"/>
+
+        <Spinner
+            android:id="@+id/spinnerFrom"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_toEndOf="@id/takeoff"
+            android:layout_marginStart="15dp"
+            android:textColor="@android:color/black"
+            android:layout_alignTop="@id/takeoff" />
+
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/takeoff"
+            android:textSize="17sp"
+            android:text="@string/to"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/landing"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_below="@id/txt2"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:src="@drawable/landingg"/>
+
+        <Spinner
+            android:id="@+id/spinnerTo"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_toEndOf="@id/landing"
+            android:layout_marginStart="15dp"
+            android:textColor="@android:color/black"
+            android:layout_alignTop="@id/landing" />
+
+        <TextView
+            android:id="@+id/txt3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/landing"
+            android:textSize="17sp"
+            android:text="@string/departure_date"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <!-- Tanggal Keberangkatan -->
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt3"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="24dp" />
+
+        <TextView
+            android:id="@+id/txt4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_below="@id/datePicker"
+            android:textSize="17sp"
+            android:text="@string/departure_time"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <!-- Waktu Keberangkatan -->
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt4"
+            android:timePickerMode="spinner"
+            android:textColor="@android:color/black"
+            android:layout_marginStart="24dp"/>
+
+        <TextView
+            android:id="@+id/txt5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:text="@string/tickets"
+            android:layout_below="@id/timePicker"
+            android:layout_marginStart="30dp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/txt6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:text="@string/seat_class"
+            android:layout_below="@id/timePicker"
+
+            android:layout_toEndOf="@id/txt5"
+            android:layout_marginStart="80dp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:id="@+id/pslayout"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt5"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_marginStart="30dp">
+
+            <Spinner
+                android:id="@+id/spinnerTicketCount"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Spinner
+                android:id="@+id/spinnerClass"
+                android:layout_width="10dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="30dp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonPesan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pslayout"
+            android:text="@string/buy_ticket"
+            android:layout_marginStart="145dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginBottom="60dp"/>
+    </RelativeLayout>
+</ScrollView>
